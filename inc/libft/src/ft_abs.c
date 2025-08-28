@@ -1,19 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Minitalk.h                                         :+:      :+:    :+:   */
+/*   ft_abs.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cjackows <cjackows@student.42wolfsburg.    +#+  +:+       +#+        */
+/*   By: cfilacch <cfilacch@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/29 11:46:40 by cjackows          #+#    #+#             */
-/*   Updated: 2025/08/28 16:29:36 by cfilacch         ###   ########.fr       */
+/*   Created: 2025/08/28 16:15:02 by cfilacch          #+#    #+#             */
+/*   Updated: 2025/08/28 16:15:02 by cfilacch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MINITALK_H
-# define MINITALK_H
 
-# include "libft/inc/libft.h"
-# include <signal.h>
+#include "../inc/libft.h"
 
-#endif
+int	ft_abs(int num)
+{
+	if (num < 0)
+		num *= -1;
+	return (num);
+}

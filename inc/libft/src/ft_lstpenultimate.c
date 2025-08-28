@@ -1,19 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Minitalk.h                                         :+:      :+:    :+:   */
+/*   ft_lstpenultimate.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cjackows <cjackows@student.42wolfsburg.    +#+  +:+       +#+        */
+/*   By: cfilacch <cfilacch@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/29 11:46:40 by cjackows          #+#    #+#             */
-/*   Updated: 2025/08/28 16:29:36 by cfilacch         ###   ########.fr       */
+/*   Created: 2025/08/28 16:15:03 by cfilacch          #+#    #+#             */
+/*   Updated: 2025/08/28 16:15:03 by cfilacch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MINITALK_H
-# define MINITALK_H
 
-# include "libft/inc/libft.h"
-# include <signal.h>
+#include "../inc/libft.h"
 
-#endif
+t_list	*ft_lstpenultimate(t_list *lst)
+{
+	t_list	*tmp;
+
+	if (!lst)
+		return (0);
+	tmp = lst;
+	while (tmp->next->next)
+		tmp = tmp->next;
+	return (tmp);
+}

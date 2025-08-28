@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   client.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cjackows <cjackows@student.42wolfsburg.    +#+  +:+       +#+        */
+/*   By: cfilacch <cfilacch@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/29 11:51:09 by cjackows          #+#    #+#             */
-/*   Updated: 2023/07/27 15:26:31 by cjackows         ###   ########.fr       */
+/*   Created: 2025/08/28 16:30:27 by cfilacch          #+#    #+#             */
+/*   Updated: 2025/08/28 16:37:16 by cfilacch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,20 +27,20 @@ static void	server_signal_handler(int signal)
 }
 
 /*
-	Value of a char in memory is represented as 8 bits (1 byte) therfore to 
+	Value of a char in memory is represented as 8 bits (1 byte) therfore to
 	send a char over signals we first need to convert it into binary.
-	To achive that function iterates 8 times wich each repetition 
-	shifting the first bit to the left going down to the least 
+	To achive that function iterates 8 times wich each repetition
+	shifting the first bit to the left going down to the least
 	significant bit (bit 0).
-	
-	
+
+
 	The line "((c >> i) & 1)" is used to shift the binary representation
-	 of the character c to the right by i positions.
+		of the character c to the right by i positions.
 	Function use SIGUSR2 (=30) to send "0" and SIGUSR1 (=31) to send "1".
 	?	---= Right bit shift =---
 	?	b7 b6 b5 b4 b3 b2 b1 b0
 	?	0  b7 b6 b5 b4 b3 b2 b1
-	
+
 	?	---= Simple visual representation for c = 'A' | 01000001 =---
 	? 	i = 7 | 0 100000  0 <- c | 0 |
 	? 	i = 6 | 00 000000 1 <- c | 1 |
@@ -69,7 +69,7 @@ static void	char2binary(int pid, char c)
 }
 
 /*
-	Function responsible for simple PID parsing check. Exits the program on ERROR.
+  Function responsible for simple PID parsing check. Exits the program on ERROR.
 */
 
 static int	pid_check(int pid)
@@ -85,11 +85,11 @@ static int	pid_check(int pid)
 }
 
 /*
-	Function at first initializes the sigation struct signal, adressing 
+	Function at first initializes the sigation struct signal, adressing
 	signal handling to external function. Function iterates trough secound
 	passed argument passing each character to external function responsible
-	 for sending binary value of that char as a signal to server.c.
-	String Null termination is done after the conversion. Using a global 
+		for sending binary value of that char as a signal to server.c.
+	String Null termination is done after the conversion. Using a global
 	variable g_message_delivered, function is able to detect errors if the
 	message got interrupted.
 */

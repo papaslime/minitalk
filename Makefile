@@ -3,41 +3,18 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: cjackows <cjackows@student.42wolfsburg.    +#+  +:+       +#+         #
+#    By: cfilacch <cfilacch@student.42roma.it>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/03/29 12:11:58 by cjackows          #+#    #+#              #
-#    Updated: 2025/08/27 20:03:50 by cfilacch         ###   ########.fr        #
+#    Created: 2025/08/28 16:26:17 by cfilacch          #+#    #+#              #
+#    Updated: 2025/08/28 16:28:57 by cfilacch         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-RED			=	\033[38;5;160m
-RED_B		=	\033[48;5;160m
-DELETED		=	\033[48;5;160m[DELETED]\033[0m
-GREEN		=	\033[38;5;40m
-GREEN_B		=	\033[48;5;40m
-COMPILATION	=	\033[48;5;40m[COMPILATION]\033[0m $(GREEN)
-BLUE		=	\033[38;5;123m
-BLUE_B		=	\033[48;5;39m
-INFO		=	\033[48;5;39m[INFORMATION]\033[0m $(BLUE)
-RESET		=	\033[0m
-PROGRESS_WIDTH = 20
-ifeq ($(shell uname), Linux)
-	OS			=	Linux
-	PROGRESS_DONE_CHAR = \#
-	PROGRESS_TODO_CHAR = -
-else
-	OS				=	Mac
-	PROGRESS_DONE_CHAR = 🟩
-	PROGRESS_TODO_CHAR = ⬜️
-endif
-CURRENT_PROGRESS = 0
-TOTAL_PROGRESS = $(words $(OBJ))
-
-CC			=	cc
+CC			=	gcc
 CFLAGS		=	-Wall -Wextra -Werror
-#-fsanitize=address
- 
-LIBFT_DIR	=	./inc/42-libft/
+# -fsanitize=address
+
+LIBFT_DIR	=	./inc/libft/
 LIBFT		=	$(LIBFT_DIR)libft.a
 HDRS_DIR	=	./inc/
 SRC_DIR		=	./src/
@@ -48,11 +25,11 @@ LIBS		=	-L$(LIBFT_DIR)
 all: libft server client
 
 server:
-	@echo "$(COMPILATION)server compilation.$(RESET)"
+	@echo "Compiling server..."
 	$(CC) $(CFLAGS) -o server src/server.c $(HDRS) $(LIBFT)
 
 client:
-	@echo "$(COMPILATION)client compilation.$(RESET)"
+	@echo "Compiling client..."
 	$(CC) $(CFLAGS) -o client src/client.c $(HDRS) $(LIBFT)
 
 libft:
@@ -63,22 +40,22 @@ clean:
 	@make clean --quiet -C $(LIBFT_DIR)
 	@for obj in $(OBJ); do \
 		rm -f $$obj; \
-		printf "$(RED_B)[DELETED]$(RESET) $(RED)$$obj$(RESET)\n"; \
+		echo "Deleted $$obj"; \
 	done
 
 fclean: clean
 	@make fclean --quiet -C $(LIBFT_DIR)
-	@rm -f server;
-	@rm -f client;
-	@printf "$(RED_B)[DELETED]$(RESET) $(RED)$(NAME)$(RESET)\n"; \
+	@rm -f server
+	@rm -f client
+	@echo "Deleted server and client executables"
 
 fclean_fast:
 	@for obj in $(OBJ); do \
 		rm -f $$obj; \
-		printf "$(RED_B)[DELETED]$(RESET) $(RED)$$obj$(RESET)\n"; \
+		echo "Deleted $$obj"; \
 	done
-	@rm -f $(NAME);
-	@printf "$(RED_B)[DELETED]$(RESET) $(RED)$(NAME)$(RESET)\n"; \
+	@rm -f $(NAME)
+	@echo "Deleted $(NAME)"
 
 re: fclean all
 
@@ -88,11 +65,11 @@ norm:
 	@norminette * | grep Error
 
 git:
-	@echo "$(BLUE)"
-	git add *
+	@git add *
 	@read -p "Commit msg:" msg;\
 	git commit -m "$$msg"
 	git push
-	@echo "$(INFO)$(GREEN)Git add, commit, push performed ✅$(RESET)"
+	@echo "Git add, commit, push performed"
 
 .PHONY: all clean fclean re sre git libft
+
