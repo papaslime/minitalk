@@ -10,20 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "../inc/libft.h"
 
 /**
- * @brief	Function memcpy() is used to copy a memory block from one 
+ * @brief	Function memcpy() is used to copy a memory block from one
  * location to another. No NULL at the end.
-function doesn’t check for overflow or \0 
+function doesn’t check for overflow or \0
  * @param dst pointer where stuff gets copied to
  * @param src stuff that gets copied into 'dst'
  * @param n up to how many characters gets copy pasted
  * @return void* 'dst'
  */
 void	*ft_memcpy(void *dst, const void *src, size_t n)
-{	
+{
 	char		*dst_tmp;
 	const char	*src_temp;
 

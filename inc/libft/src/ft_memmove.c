@@ -10,14 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "../inc/libft.h"
 
 /**
- * @brief   Function copies n characters from the object pointed to by 'src' 
+ * @brief   Function copies n characters from the object pointed to by 'src'
  * into the object pointed to by 'dest'.
  * Does not check the validity of the destination buffer.
- * copies the data first to an intermediate buffer, then from the 
+ * copies the data first to an intermediate buffer, then from the
  * buffer to destination.
  * -> similar to memcpy but better
  * One of 'dest' or 'src' can be NULL but not both!

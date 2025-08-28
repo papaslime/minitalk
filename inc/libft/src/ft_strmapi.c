@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "../inc/libft.h"
 
 /**
@@ -21,8 +20,8 @@
  * @param s The string on which to iterate.
  * @param f The function to apply to each character.
  * @return char The string created from the successive applications of ’f’.
-	Returns NULL if the allocation fails. |  	
-	returns pointer to created array of pointers 
+	Returns NULL if the allocation fails. |
+	returns pointer to created array of pointers
  */
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -47,15 +46,15 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 }
 
 // char	cipher(unsigned int i, char str)
-// {	
+// {
 // 	return (str + 1);
 // }
-// int	main()
+// int	main(void)
 // {
 // 	char	str1[] = "Hello world!";
 // 	char	*str2;
 // 	printf("Before encription - %s\n", str1);
 // 	str2 = ft_strmapi(str1, cipher);
 // 	printf("Cipher - %s\n", str2);
-// 	return 0;
+// 	return (0);
 // }

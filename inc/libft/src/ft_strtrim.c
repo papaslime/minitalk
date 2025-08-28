@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "../inc/libft.h"
 
 static int	rm_char(char c, const char *set)
@@ -22,7 +21,7 @@ static int	rm_char(char c, const char *set)
 }
 
 /**
- * @brief	Allocates (with malloc) and returns a copy of 's1' with the 
+ * @brief	Allocates (with malloc) and returns a copy of 's1' with the
  * characters specified in ’set’ removed from the beginning and the end
  * of the string.
  * @param s1  The string to be trimmed.
@@ -47,7 +46,7 @@ char	*ft_strtrim(const char *s1, const char *set)
 	return (str);
 }
 
-// int	main()
+// int	main(void)
 // {
 // 		char	*strtrim;
 // 		char s1[] = "	Hello World!";

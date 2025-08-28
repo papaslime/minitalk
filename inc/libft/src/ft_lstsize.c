@@ -10,13 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "../inc/libft.h"
 
 /**
  * @brief Counts the number of nodes in a list.
- * 
- * @param lst The beginning of the list. 
+ *
+ * @param lst The beginning of the list.
  * @return int The length of the list
  */
 int	ft_lstsize(t_list *lst)

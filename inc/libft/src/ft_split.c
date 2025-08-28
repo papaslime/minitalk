@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "../inc/libft.h"
 
 static int	get_lentht_of_part(char const *s, char c)
@@ -40,9 +39,9 @@ int	ft_get_number_of_words(char const *s, char c)
 	return (i);
 }
 
-static int	get_word(char	**result, int i, char const *s, char c)
+static int	get_word(char **result, int i, char const *s, char c)
 {
-	int		lentht_of_word;
+	int	lentht_of_word;
 
 	lentht_of_word = get_lentht_of_part(s, c);
 	result[i] = (char *)malloc(lentht_of_word + 1);
@@ -95,7 +94,7 @@ char	**ft_split(char const *s, char c)
 	return (res);
 }
 
-// int	main()
+// int	main(void)
 // {
 // 	char	**split;
 // 	const char	*s ="Hello World!";

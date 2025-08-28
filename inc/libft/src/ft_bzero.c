@@ -10,12 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "../inc/libft.h"
 
 /**
  * @brief	function erases the data in the n bytes of the memory
-       		starting at the location pointed to by 's', by writing zeros 
+			starting at the location pointed to by 's', by writing zeros
 			(bytes containing '\0') to that area.
  * @param s space in memory that gets sized to null
  * @param n lengh we want to str gets nulled
@@ -26,7 +25,7 @@ void	ft_bzero(void *s, size_t n)
 	unsigned char	*tem;
 
 	i = 0;
-	tem = (unsigned char *) s;
+	tem = (unsigned char *)s;
 	while (n > i)
 	{
 		tem[i] = 0;
@@ -40,5 +39,5 @@ void	ft_bzero(void *s, size_t n)
 // 	unsigned char	str[]="1234567890";
 // 	ft_bzero(str, 10);
 // 	printf ("src: %s!\n",src);
-// 	return 0;
+// 	return (0);
 // }

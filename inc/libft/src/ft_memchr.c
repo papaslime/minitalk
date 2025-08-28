@@ -10,17 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "../inc/libft.h"
 
 /**
- * @brief	Function returns a pointer to the first occurrence of the 
- * character 'c' within the first 'n' characters of the object pointed to by s. 
+ * @brief	Function returns a pointer to the first occurrence of the
+ * character 'c' within the first 'n' characters of the object pointed to by s.
  * If c isn't found, it returns a null pointer.
  * @param s String that we search trough.
  * @param c The character that we are looking for.
  * @param n  Search within the first n characters of the object pointed to by s.
- * @return void* 
+ * @return void*
  */
 void	*ft_memchr(const void *s, int c, size_t n)
 {

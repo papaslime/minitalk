@@ -10,12 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "../inc/libft.h"
 
 /**
  * @brief Pass the string "s" to the given file descriptor.
- * 
+ *
  * @param s String passed as parameter
  * @param fd File descriptor
  */

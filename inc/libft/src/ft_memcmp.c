@@ -10,18 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "../inc/libft.h"
 
 /**
- * @brief Function returns a negative, zero, or positive integer depending on 
- * whether the first n characters of the object pointed to by s1 are 
- * less than, equal to, or greater than the first n characters of the object 
- * pointed to by s2. 
+ * @brief Function returns a negative, zero, or positive integer depending on
+ * whether the first n characters of the object pointed to by s1 are
+ * less than, equal to, or greater than the first n characters of the object
+ * pointed to by s2.
  * @param s1 first string
  * @param s2 second string
  * @param n up to how many characters we are searching trough
- * @return Returns int difference between both strings (ASCII value) or 0 
+ * @return Returns int difference between both strings (ASCII value) or 0
  * if they are the same.
  */
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
@@ -42,7 +41,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	return (0);
 }
 
-//int	main(void)
+// int	main(void)
 //{
 //	unsigned char src[15] = "1234567890";
 //	unsigned char dst[15] = "1234567890";
@@ -51,5 +50,5 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 //		printf ("Identical\n");
 //	else
 //		printf ("Not identical\n");
-//	return 0;
+//	return (0);
 //}

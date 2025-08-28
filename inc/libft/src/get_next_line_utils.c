@@ -6,20 +6,19 @@
 /*   By: cfilacch <cfilacch@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 16:15:04 by cfilacch          #+#    #+#             */
-/*   Updated: 2025/08/28 16:15:04 by cfilacch         ###   ########.fr       */
+/*   Updated: 2025/08/28 16:44:50 by cfilacch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "../inc/libft.h"
 
 /**
- * @brief   function searches for the FIRST occurrence of 
- * character 'c' in string 's'.If 's' doesnt end with 
+ * @brief   function searches for the FIRST occurrence of
+ * character 'c' in string 's'.If 's' doesnt end with
  * NULL program might cras!
  * @param s This is the string to be scanned.
  * @param c This is the character to be searched in 's'.
- * @return char* Returns a pointer to the first 
+ * @return char* Returns a pointer to the first
  * occurrence of c that is converted to a character in string.
  * The function returns NULL if the specified character is not found.
  */
@@ -45,11 +44,11 @@ char	*ft_strchr(char *str, int c)
 /**
  * @brief Allocates (with malloc) and returns a substring from the string 's'.
  * The substring begins at index ’start’ and is of maximum size ’len’.
- * @param s	The string from which to create the substring. 
+ * @param s	The string from which to create the substring.
  * @param start	The start index of the substring in the string ’s’.
  * @param len	The maximum length of the substring.
- * @return char* to allocated with subtring memory. 
-**/
+ * @return char* to allocated with subtring memory.
+ **/
 char	*ft_substr(char *s, unsigned int start, size_t len)
 {
 	char	*sub;
@@ -78,12 +77,12 @@ char	*ft_substr(char *s, unsigned int start, size_t len)
 }
 
 /**
- * @brief Function duplicates a string and returns a pointer 
- * pointing to the first byte of copied string. || 
- * It tries to allocate (with malloc) enough memory to hold the old string 
+ * @brief Function duplicates a string and returns a pointer
+ * pointing to the first byte of copied string. ||
+ * It tries to allocate (with malloc) enough memory to hold the old string
  * (plus a '\0' character to mark the end of the string).
  * @param s1 pointer to string that gets duplicated.
- * @return char*  Return the new address (which the caller is responsible for 
+ * @return char*  Return the new address (which the caller is responsible for
  * freeing at some point).
  * If the allocation failed returns NULL.
  */
@@ -92,7 +91,7 @@ char	*ft_strdup(char *s1)
 	char	*output_str;
 	int		i;
 
-	output_str = (char *)malloc(sizeof (char) * ft_strlen(s1) + 1);
+	output_str = (char *)malloc(sizeof(char) * ft_strlen(s1) + 1);
 	i = 0;
 	if (!output_str)
 		return (NULL);
@@ -105,14 +104,14 @@ char	*ft_strdup(char *s1)
 	return (output_str);
 }
 
-/**
- * @brief 	Function appends the NUL-terminated string 'src' to the end of 'dst'.
+/*
+ * @brief Function appends the NUL-terminated string 'src' to the end of 'dst'.
  * Takes whole size of destination buffer not only the size
- * It garantees null termination (as long size > 0 && dest 
+ * It garantees null termination (as long size > 0 && dest
  * has at least onefree space)
  * Function does not check if 'dts' or 'src' is NULL!
  * @param dst String where 'src' gets appended to.
- * @param src String that gets appended to the end of 'dst' 
+ * @param src String that gets appended to the end of 'dst'
  * @param dstsize How many characters of 'dst' gets appended.
  * @return 	Returns size_t of src + dst (without NUL) OR NULL if fails.
  */

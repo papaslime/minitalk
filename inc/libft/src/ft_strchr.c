@@ -10,16 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "../inc/libft.h"
 
 /**
- * @brief   function searches for the FIRST occurrence of 
- * character 'c' in string 's'.If 's' doesnt end with 
+ * @brief   function searches for the FIRST occurrence of
+ * character 'c' in string 's'.If 's' doesnt end with
  * NULL program might cras!
  * @param s This is the string to be scanned.
  * @param c This is the character to be searched in 's'.
- * @return char* Returns a pointer to the first 
+ * @return char* Returns a pointer to the first
  * occurrence of c that is converted to a character in string.
  * The function returns NULL if the specified character is not found.
  */

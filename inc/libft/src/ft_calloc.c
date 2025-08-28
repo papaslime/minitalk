@@ -10,11 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "../inc/libft.h"
 
 /**
- * @brief	Function used to allocate multiple blocks of memory having the 
+ * @brief	Function used to allocate multiple blocks of memory having the
  * same size. Different to malloc, sets all places to '\0'.
  * It is a dynamic memory allocation function that allocates the memory space
  * to complex data structures such as arrays and structures and returns a void
@@ -43,7 +42,7 @@ void	*ft_calloc(size_t count, size_t size)
 // 	ptr = (int*)ft_calloc(10, sizeof(int));
 // 	if (ptr == NULL)
 // 		printf("Memory not allocated \n");
-// 	else 
+// 	else
 // 		printf("Memory allocated successfully \n");
 // 	free(ptr);
 // 	return (0);

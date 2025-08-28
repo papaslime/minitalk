@@ -10,13 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "../inc/libft.h"
 
 /**
  * @brief Recursive function for passing the integer "n"
- * 			 to the given file descriptor.
- * 
+ * 				to the given file descriptor.
+ *
  * @param n Passed integer
  * @param fd File descriptor
  */
@@ -49,5 +48,5 @@ void	ft_putnbr_fd(int n, int fd)
 // 	printf("\n");
 // 	ft_putnbr_fd(num2, 1);
 // 	printf("\n");
-// 	return 0;
+// 	return (0);
 // }

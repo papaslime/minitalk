@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "../inc/libft.h"
 
 size_t	ft_strlen(const char *str);
@@ -20,7 +19,7 @@ char	*reset(char *main_str);
 
 /**
  * @brief Read buffer size from fd (up untill string end) and returns a line.
- * 
+ *
  * @param fd file descriptor
  * @return char* Read line: correct behavior
  * NULL: there is nothing else to read, or an error occurred
@@ -42,9 +41,9 @@ char	*get_next_line(int fd)
 
 /**
  * @brief Calculates lenght of the passed string
- * 
- * @param str 
- * @return size_t 
+ *
+ * @param str
+ * @return size_t
  */
 size_t	ft_strlen(const char *str)
 {
@@ -90,11 +89,11 @@ char	*read_file(int fd, char *main_str)
 /**
  * @brief Function returns everything up to new line or end of the file
  * i = chars before new line or end of the file
- * substr cuts the line in place of index 
+ * substr cuts the line in place of index
  * i++ before return is for new line char or null
  * null creates buffer overflow but ft_substr() has hardcoded check for that
- * @param main_str 
- * @return char* 
+ * @param main_str
+ * @return char*
  */
 char	*return_func(char *main_str)
 {
@@ -114,11 +113,11 @@ char	*return_func(char *main_str)
 /**
  * @brief Function substract returned line from main_str and returns the rest
  * of characters that are left in main_str
- * which later on gets reasigned to the main_function if there 
+ * which later on gets reasigned to the main_function if there
  * still is something left
- * 
- * @param main_str 
- * @return char* 
+ *
+ * @param main_str
+ * @return char*
  */
 char	*reset(char *main_str)
 {

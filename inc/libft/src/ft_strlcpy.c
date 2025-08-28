@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "../inc/libft.h"
 
 /**
@@ -47,5 +46,5 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 // 	char	dst[10] = "0987654321";
 // 	ft_strlcpy (dst, src, 6);
 // 	printf("dst: %s\n", dst);
-// 	return 0;
+// 	return (0);
 // }

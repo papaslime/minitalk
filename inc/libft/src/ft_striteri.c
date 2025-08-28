@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "../inc/libft.h"
 
 /**
@@ -21,7 +20,7 @@
  * @param s The string on which to iterate.
  * @param f  The function to apply to each character.
  */
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	unsigned int	i;
 
@@ -31,7 +30,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		while (s[i])
 		{
 			(*f)(i, s + i);
-		i++;
+			i++;
 		}
 	}
 }
@@ -47,5 +46,5 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 // 	printf("Before encription - %s\n", str1);
 // 	ft_striteri(str1, cipher);
 // 	printf("Cipher - %s\n", str1);
-// 	return 0;
+// 	return (0);
 // }

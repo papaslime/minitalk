@@ -6,15 +6,14 @@
 /*   By: cfilacch <cfilacch@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 16:15:02 by cfilacch          #+#    #+#             */
-/*   Updated: 2025/08/28 16:15:02 by cfilacch         ###   ########.fr       */
+/*   Updated: 2025/08/28 16:45:53 by cfilacch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "../inc/libft.h"
 
-/**
- * @brief 	Function checks if 'c' is a alphanumeric character (0-9 & a-z & A-Z).
+/*
+ * @brief Function checks if 'c' is a alphanumeric character (0-9 & a-z & A-Z).
  * @param c Parameter that gets checked.
  * @return 	int 1 if parameter is alphanumeric or 0 if not
  */

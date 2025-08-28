@@ -10,11 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "../inc/libft.h"
 
 /**
- * @brief Function determines the length of string excluding the ending 
+ * @brief Function determines the length of string excluding the ending
  * null character.
  * @param s Given string.
  * @return Returns size_t the length of string.

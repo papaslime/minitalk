@@ -10,16 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "../inc/libft.h"
 
 /**
  * @brief Allocates (with malloc) and returns a substring from the string 's'.
  * The substring begins at index ’start’ and is of maximum size ’len’.
- * @param s	The string from which to create the substring. 
+ * @param s	The string from which to create the substring.
  * @param start	The start index of the substring in the string ’s’.
  * @param len	The maximum length of the substring.
- * @return char* to allocated with subtring memory. 
+ * @return char* to allocated with subtring memory.
  */
 char	*ft_substr(char *s, unsigned int start, size_t len)
 {
@@ -35,7 +34,7 @@ char	*ft_substr(char *s, unsigned int start, size_t len)
 	while (start <= ft_strlen(s) && i < len)
 	{
 		str[i] = s[i + start];
-		i ++;
+		i++;
 	}
 	str[i] = '\0';
 	return (str);

@@ -10,17 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "../inc/libft.h"
 
 /**
- * @brief	Function is used to fill a block of memory with given/particular 
- * value. It is used when you want to fill all or some of the blocks of the 
- * memory with a particular value. Function writes 'len' bytes of value 'c' 
+ * @brief	Function is used to fill a block of memory with given/particular
+ * value. It is used when you want to fill all or some of the blocks of the
+ * memory with a particular value. Function writes 'len' bytes of value 'c'
  * (converted to an unsigned char) to the string b.
  * @param str where the character gets copied too
- * @param c the character that gets copied to str 
- 			gets convertet to ASCII (int 0 = char 48)
+ * @param c the character that gets copied to str
+			gets convertet to ASCII (int 0 = char 48)
  * @param len how many characters gets copied to str
  * @return void* str
  */

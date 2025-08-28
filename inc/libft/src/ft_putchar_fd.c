@@ -10,12 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "../inc/libft.h"
 
 /**
  * @brief Outputs the character "c" to the given file descriptor.
- * 
+ *
  * @param c Character
  * @param fd File descriptor
  */
@@ -30,7 +29,7 @@ void	ft_putchar_fd(char c, int fd)
 // 	int	i;
 // 	i = 0;
 // 	char	str[] = "Hello world!";
-// 	while (str[i] != '\0')		
+// 	while (str[i] != '\0')
 // 		ft_putchar_fd(str[i++], 1);
 // 	ft_putchar_fd('\n', 1);
 // 	return (0);

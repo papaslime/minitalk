@@ -6,21 +6,20 @@
 /*   By: cfilacch <cfilacch@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 16:15:04 by cfilacch          #+#    #+#             */
-/*   Updated: 2025/08/28 16:15:04 by cfilacch         ###   ########.fr       */
+/*   Updated: 2025/08/28 16:45:28 by cfilacch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "../inc/libft.h"
 
-/**
- * @brief 	Function appends the NUL-terminated string 'src' to the end of 'dst'.
+/*
+ * @brief Function appends the NUL-terminated string 'src' to the end of 'dst'.
  * Takes whole size of destination buffer not only the size
- * It garantees null termination (as long size > 0 && dest 
+ * It garantees null termination (as long size > 0 && dest
  * has at least onefree space)
  * Function does not check if 'dts' or 'src' is NULL!
  * @param dst String where 'src' gets appended to.
- * @param src String that gets appended to the end of 'dst' 
+ * @param src String that gets appended to the end of 'dst'
  * @param dstsize How many characters of 'dst' gets appended.
  * @return 	Returns size_t of src + dst (without NUL) OR NULL if fails.
  */

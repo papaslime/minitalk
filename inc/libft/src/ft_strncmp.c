@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "../inc/libft.h"
 
 /**
@@ -21,9 +20,9 @@
  * @param str1 String 1
  * @param str2 String 2
  * @param n Value up to how many characters we are searching trough.
- * @return Returns a negative, zero, or positive integer depending on 
- * whether the first n characters of the object pointed to by 'str1' are 
- * less than, equal to, or greater than the first n characters of the 
+ * @return Returns a negative, zero, or positive integer depending on
+ * whether the first n characters of the object pointed to by 'str1' are
+ * less than, equal to, or greater than the first n characters of the
  * object pointed to by 'str2'.
  */
 int	ft_strncmp(const char *str1, const char *str2, size_t n)

@@ -10,12 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "../inc/libft.h"
 
 /**
  * @brief Adds the node ’new’ at the end of the list.
- * 
+ *
  * @param lst  The address of a pointer to the first link of a list
  * @param new  The address of a pointer to the node to be added to the list
  */

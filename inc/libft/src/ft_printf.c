@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "../inc/libft.h"
 
 static int	format_check(va_list args, const char format_specifier)
@@ -60,7 +59,7 @@ int	ft_printf(const char *str, ...)
 		}
 		else
 			str_len += write(1, &str[str_index], 1);
-	str_index++;
+		str_index++;
 	}
 	va_end(args);
 	return (str_len);
@@ -79,15 +78,15 @@ int	ft_print(char c, char *str)
 
 int	ft_putnbr(const char *c, int base, size_t nbr)
 {
-	int					i;
-	long long			temp;
+	int			i;
+	long long	temp;
 
 	i = 0;
 	temp = nbr;
 	if (c[0] == 'd')
 	{
 		if (temp < 0)
-		{				
+		{
 			i += ft_print('-', "ignore");
 			nbr *= -1;
 		}
